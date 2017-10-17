@@ -15,6 +15,12 @@
 		555615F71F96164F009B1D35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 555615F61F96164F009B1D35 /* main.m */; };
 		555616011F96164F009B1D35 /* PhotosManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 555616001F96164F009B1D35 /* PhotosManagerTests.m */; };
 		5556160C1F96164F009B1D35 /* PhotosManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5556160B1F96164F009B1D35 /* PhotosManagerUITests.m */; };
+		5556161E1F96175A009B1D35 /* FZJPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5556161B1F961746009B1D35 /* FZJPhotoModel.m */; };
+		5556161F1F96175A009B1D35 /* FZJPhotoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5556161D1F961746009B1D35 /* FZJPhotoTool.m */; };
+		555616221F961763009B1D35 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 555616211F961763009B1D35 /* Photos.framework */; };
+		555616261F9617B0009B1D35 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 555616241F9617AF009B1D35 /* PhotoCollectionViewCell.m */; };
+		5556162B1F96180C009B1D35 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5556162A1F9617FD009B1D35 /* UIView+Frame.m */; };
+		5556162C1F96433C009B1D35 /* PhotoCollectionViewCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 555616251F9617AF009B1D35 /* PhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,17 @@
 		555616071F96164F009B1D35 /* PhotosManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5556160B1F96164F009B1D35 /* PhotosManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosManagerUITests.m; sourceTree = "<group>"; };
 		5556160D1F96164F009B1D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5556161A1F961746009B1D35 /* FZJPhotoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZJPhotoModel.h; sourceTree = "<group>"; };
+		5556161B1F961746009B1D35 /* FZJPhotoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZJPhotoModel.m; sourceTree = "<group>"; };
+		5556161C1F961746009B1D35 /* FZJPhotoTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZJPhotoTool.h; sourceTree = "<group>"; };
+		5556161D1F961746009B1D35 /* FZJPhotoTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZJPhotoTool.m; sourceTree = "<group>"; };
+		555616211F961763009B1D35 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		555616231F9617AF009B1D35 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		555616241F9617AF009B1D35 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		555616251F9617AF009B1D35 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		555616271F9617DE009B1D35 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		555616291F9617FD009B1D35 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		5556162A1F9617FD009B1D35 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				555616221F961763009B1D35 /* Photos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +103,7 @@
 				555615FF1F96164F009B1D35 /* PhotosManagerTests */,
 				5556160A1F96164F009B1D35 /* PhotosManagerUITests */,
 				555615E51F96164F009B1D35 /* Products */,
+				555616201F961762009B1D35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +120,21 @@
 		555615E61F96164F009B1D35 /* PhotosManager */ = {
 			isa = PBXGroup;
 			children = (
+				555616281F9617FD009B1D35 /* Categories */,
+				555616191F96172F009B1D35 /* PhotosTool */,
 				555615E71F96164F009B1D35 /* AppDelegate.h */,
 				555615E81F96164F009B1D35 /* AppDelegate.m */,
 				555615EA1F96164F009B1D35 /* ViewController.h */,
 				555615EB1F96164F009B1D35 /* ViewController.m */,
 				555615ED1F96164F009B1D35 /* Main.storyboard */,
+				555616231F9617AF009B1D35 /* PhotoCollectionViewCell.h */,
+				555616241F9617AF009B1D35 /* PhotoCollectionViewCell.m */,
+				555616251F9617AF009B1D35 /* PhotoCollectionViewCell.xib */,
 				555615F01F96164F009B1D35 /* Assets.xcassets */,
 				555615F21F96164F009B1D35 /* LaunchScreen.storyboard */,
 				555615F51F96164F009B1D35 /* Info.plist */,
 				555615F61F96164F009B1D35 /* main.m */,
+				555616271F9617DE009B1D35 /* PrefixHeader.pch */,
 			);
 			path = PhotosManager;
 			sourceTree = "<group>";
@@ -130,6 +155,34 @@
 				5556160D1F96164F009B1D35 /* Info.plist */,
 			);
 			path = PhotosManagerUITests;
+			sourceTree = "<group>";
+		};
+		555616191F96172F009B1D35 /* PhotosTool */ = {
+			isa = PBXGroup;
+			children = (
+				5556161A1F961746009B1D35 /* FZJPhotoModel.h */,
+				5556161B1F961746009B1D35 /* FZJPhotoModel.m */,
+				5556161C1F961746009B1D35 /* FZJPhotoTool.h */,
+				5556161D1F961746009B1D35 /* FZJPhotoTool.m */,
+			);
+			path = PhotosTool;
+			sourceTree = "<group>";
+		};
+		555616201F961762009B1D35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				555616211F961763009B1D35 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		555616281F9617FD009B1D35 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				555616291F9617FD009B1D35 /* UIView+Frame.h */,
+				5556162A1F9617FD009B1D35 /* UIView+Frame.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5556162C1F96433C009B1D35 /* PhotoCollectionViewCell.xib in Sources */,
+				5556162B1F96180C009B1D35 /* UIView+Frame.m in Sources */,
+				5556161E1F96175A009B1D35 /* FZJPhotoModel.m in Sources */,
+				555616261F9617B0009B1D35 /* PhotoCollectionViewCell.m in Sources */,
+				5556161F1F96175A009B1D35 /* FZJPhotoTool.m in Sources */,
 				555615EC1F96164F009B1D35 /* ViewController.m in Sources */,
 				555615F71F96164F009B1D35 /* main.m in Sources */,
 				555615E91F96164F009B1D35 /* AppDelegate.m in Sources */,
@@ -431,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotosManager/PrefixHeader.pch";
 				INFOPLIST_FILE = PhotosManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.PhotosManager";
@@ -444,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotosManager/PrefixHeader.pch";
 				INFOPLIST_FILE = PhotosManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "--.PhotosManager";

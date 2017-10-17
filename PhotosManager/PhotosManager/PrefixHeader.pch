@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  PhotosManager
+//
+//  Created by LSH on 2017/10/17.
+//  Copyright © 2017年 ZhangKang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+#endif /* PrefixHeader_pch */
+#import "UIView+Frame.h"
+#import "PhotosTool/FZJPhotoTool.h"
+#import "PhotosTool/FZJPhotoModel.h"
+
+
+#define kSCreen_W  [UIScreen mainScreen].bounds.size.width
+#define kSCreen_H  [UIScreen mainScreen].bounds.size.height
+
+
+#define kNavBar_H self.navigationController.navigationBar.frame.size.height
+#define kStatusBar_H  [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavAndStatusBarH kNavBar_H+kStatusBar_H
+
+#define kScreenSize [UIScreen mainScreen].bounds.size
+
+//获取系统版本
+#define SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+#define CurrentSystemVersion [[UIDevice currentDevice] systemVersion]
